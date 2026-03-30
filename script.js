@@ -1,6 +1,6 @@
 let recipes = JSON.parse(localStorage.getItem("recipes")) || [];
 
-// ✅ Save User Profile
+
 function saveUser(){
  let user = {
   name: document.getElementById("username").value,
@@ -10,7 +10,7 @@ function saveUser(){
  alert("Profile Saved");
 }
 
-// ✅ Add Recipe
+
 function addRecipe(){
  let recipe = {
   name: document.getElementById("name").value,
@@ -20,7 +20,7 @@ function addRecipe(){
   rating: 0
  };
 
- // basic validation
+
  if(!recipe.name || !recipe.ingredients){
   alert("Please fill required fields!");
   return;
@@ -30,13 +30,14 @@ function addRecipe(){
  localStorage.setItem("recipes", JSON.stringify(recipes));
  display(recipes);
 
- // clear inputs
+
  document.getElementById("name").value = "";
  document.getElementById("cuisine").value = "";
  document.getElementById("ingredients").value = "";
 }
 
-// ✅ Display Recipes
+
+
 function display(data){
  let div = document.getElementById("recipes");
  div.innerHTML = "";
@@ -61,7 +62,8 @@ function display(data){
  });
 }
 
-// ✅ Search + Filter
+
+
 function search(){
  let q = document.getElementById("search").value.toLowerCase();
  let f = document.getElementById("filter").value;
@@ -74,14 +76,16 @@ function search(){
  display(filtered);
 }
 
-// ✅ Rate Recipe
+
+
 function rate(index){
  recipes[index].rating++;
  localStorage.setItem("recipes", JSON.stringify(recipes));
  display(recipes);
 }
 
-// ✅ Delete Recipe
+
+
 function deleteRecipe(index){
  if(confirm("Are you sure you want to delete this recipe?")){
   recipes.splice(index,1);
@@ -90,5 +94,6 @@ function deleteRecipe(index){
  }
 }
 
-// ✅ Load on Start
+
+
 display(recipes);
