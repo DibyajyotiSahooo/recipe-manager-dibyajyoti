@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipe Management</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🍲 Recipe Manager</h1>
+
+<div class="card">
+<h2>User Profile</h2>
+<input id="username" placeholder="Name">
+<select id="diet">
+<option>Veg</option>
+<option>Non-Veg</option>
+<option>Vegan</option>
+</select>
+<button onclick="saveUser()">Save Profile</button>
+</div>
+
+<div class="card">
+<h2>Add Recipe</h2>
+<input id="name" placeholder="Recipe Name">
+<input id="cuisine" placeholder="Cuisine">
+<textarea id="ingredients" placeholder="Ingredients"></textarea>
+<select id="type">
+<option>Breakfast</option>
+<option>Lunch</option>
+<option>Dinner</option>
+</select>
+<button onclick="addRecipe()">Add</button>
+</div>
+
+<div class="card">
+<input id="search" placeholder="Search recipes">
+<select id="filter">
+<option value="">All</option>
+<option value="Breakfast">Breakfast</option>
+<option value="Lunch">Lunch</option>
+<option value="Dinner">Dinner</option>
+</select>
+<button onclick="search()">Search</button>
+</div>
+
+<div id="recipes"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

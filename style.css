@@ -1,0 +1,95 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY BACKGROUND */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+/* TITLE */
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* CARD DESIGN */
+.card, .recipe {
+  background: #ffffff;
+  padding: 15px;
+  margin: 15px auto;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.card:hover, .recipe:hover {
+  transform: translateY(-3px);
+}
+
+/* INPUT FIELDS */
+input, select, textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 10px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+button:hover {
+  background: #218838;
+}
+
+/* DELETE BUTTON */
+button.delete {
+  background: #dc3545;
+}
+
+button.delete:hover {
+  background: #c82333;
+}
+
+/* RECIPE TEXT */
+.recipe p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* NO DATA MESSAGE */
+#recipes p {
+  text-align: center;
+  color: #ccc;
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  .card, .recipe {
+    width: 95%;
+  }
+}
